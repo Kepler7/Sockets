@@ -1,14 +1,13 @@
 import java.io.* ;
 import java.net.* ;
 
-public class Servidor {
+public class Servidor 
+{
 	static final int PUERTO=5000;
-
-	 public Servidor( ) {
-
-	   try {
-
-
+	 public Servidor( ) 
+	 {
+	   try 
+	   {
 	     ServerSocket skServidor = new ServerSocket( PUERTO );
 	     System.out.println("Escucho el puerto " + PUERTO );
 
@@ -22,13 +21,15 @@ public class Servidor {
 	       skCliente.close();
 	     }
 	     System.out.println("Demasiados clientes por hoy");
-	   } catch( Exception e ) {
+	   } 
+	   catch( Exception e ) 
+	   {
 	     System.out.println( e.getMessage() );
 	   }
 	 }
 
-	 public static void main( String[] arg ) {
+	 public static void main( String[] arg ) 
+	 {
 	   new Servidor();
 	 }
-
 }
